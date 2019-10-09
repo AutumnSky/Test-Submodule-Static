@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03A93EBC4F89BAA39A6CF4DB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		03A93EBC4F89BAA39A6CF4DB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		181220BDDEA1033F018C07B8 /* Pods_SubmoduleTestStatic_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubmoduleTestStatic_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F241782D3C9BE876B6EE57 /* Pods-SubmoduleTestStatic_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubmoduleTestStatic_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SubmoduleTestStatic_Tests/Pods-SubmoduleTestStatic_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		32796FF283032E481482E658 /* Pods-SubmoduleTestStatic_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubmoduleTestStatic_Example.release.xcconfig"; path = "Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,9 +44,9 @@
 		607FACE51AFB9204008FA782 /* SubmoduleTestStatic_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubmoduleTestStatic_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7BD14CFD39EEE3A1CD580131 /* SubmoduleTestStatic.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SubmoduleTestStatic.podspec; path = ../SubmoduleTestStatic.podspec; sourceTree = "<group>"; };
+		7BD14CFD39EEE3A1CD580131 /* SubmoduleTestStatic.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SubmoduleTestStatic.podspec; path = ../SubmoduleTestStatic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		833E65B4D378244A2415548D /* Pods-SubmoduleTestStatic_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubmoduleTestStatic_Example.debug.xcconfig"; path = "Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CEE19632C9A735AFD979F983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CEE19632C9A735AFD979F983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 				29F241782D3C9BE876B6EE57 /* Pods-SubmoduleTestStatic_Tests.debug.xcconfig */,
 				5ACE2E21B4B92DA498AD4E5C /* Pods-SubmoduleTestStatic_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				2E0EB42379D73589E3539466 /* [CP] Embed Pods Frameworks */,
+				C924E48A3FC2FB9193565FFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -263,24 +263,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E0EB42379D73589E3539466 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SubmoduleTestStatic/SubmoduleTestStatic.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SubmoduleTestStatic.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6437A7A6CA9F221783DF9F4E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +307,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C924E48A3FC2FB9193565FFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SubmoduleTestStatic/SubmoduleTestStatic.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SubmoduleTestStatic.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SubmoduleTestStatic_Example/Pods-SubmoduleTestStatic_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5862F7986418DAC2F932473 /* [CP] Check Pods Manifest.lock */ = {
@@ -444,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -490,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SubmoduleTestStatic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        print(SubmoduleTestStatic.helloWorld())
+     
+        let bundleURL = Bundle(for: SubmoduleTestStaticViewController.self)
+            .bundleURL
+            .appendingPathComponent("SubmoduleTestStatic.bundle")
+        
+        let bundle = Bundle(url: bundleURL)
+        
+        let rootViewController = SubmoduleTestStaticViewController(nibName: String(describing: SubmoduleTestStaticViewController.self),
+                                                                         bundle: bundle)
+
+        if let window = self.window{
+               window.rootViewController = rootViewController
+        }
+        
         return true
     }
 
